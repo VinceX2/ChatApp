@@ -23,9 +23,9 @@ export class ChatRoomPage {
     this.getUsers().subscribe(data => {
       let user = data['user'];
       if (data['event'] === 'left') {
-        this.showToast('User left: ' + user);
+        this.showToast(user + ' dejo el chat');
       } else {
-        this.showToast('User joined: ' + user);
+        this.showToast(user +' se ha unido al chat');
       }
     });
   }
